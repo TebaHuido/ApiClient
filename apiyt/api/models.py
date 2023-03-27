@@ -21,4 +21,4 @@ class User(models.Model):
 	password=models.CharField(max_length=200)
 	mail=models.CharField(max_length=200)
 	rut=models.CharField(max_length=11)
-	profile=models.OneToOneField(Profile , null=False , blank=False, default=profile_default, on_delete=models.SET_DEFAULT)
+	profile=models.ForeignKey(Profile , null=False , blank=False, default=profile_default, on_delete=models.SET_DEFAULT)
